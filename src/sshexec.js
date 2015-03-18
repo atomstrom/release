@@ -36,9 +36,7 @@ module.exports = {
     host.commands = [
                       "cd " + host.server.path,
                       "tar -xvf " + host.server.file + " --strip 1",
-                      "rm " + host.server.file,
-                      "cd /",
-                      "/usr/local/bin/rsync-coachbox-to-appserver"
+                      "rm " + host.server.file
                     ];
     return host;
   }
