@@ -1,0 +1,12 @@
+{
+	"config": {
+		"user" 		: "",
+		"host" 		: "",
+		"port" 		: "",
+		"key"  		: "", 
+		"keypath"   : "",
+		"file" 		: "",
+		"path" 		: "",
+		"appfolder" : ""
+	} 
+}
