@@ -9,9 +9,9 @@ var host = {
       console.log(message);
     }
   }, 
-  verbose:             true,  //optional default:false 
+  verbose:             true,   //optional default:false
   debug:               false,  //optional default:false 
-  idleTimeOut:         5000,        //optional: value in milliseconds (default:5000) 
+  idleTimeOut:         5000    //optional: value in milliseconds (default:5000)
 };
 
 module.exports = {
@@ -21,8 +21,8 @@ module.exports = {
     host.closedMessage =  "--- backup done";
     host.commands = [
                       "cd " + host.server.path,
-                      "rm " + host.server.file + " --force",
-                      "tar -czvf " + host.server.file + " " + host.server.appfolder,
+                      "rm backup.tar.gz --force",
+                      "tar -czvf backup.tar.gz " + host.server.appfolder,
                       "rm -rf " + host.server.appfolder,
                       "mkdir " + host.server.appfolder
                     ];
@@ -36,8 +36,9 @@ module.exports = {
     host.commands = [
                       "cd " + host.server.path,
                       "tar -xvf " + host.server.file + " --strip 1",
-                      "rm " + host.server.file,
-                      "cd /"
+                      "rm -rf " + host.server.file,
+                      "mv data " + host.server.appfolder,
+                      "mv assets " + host.server.appfolder
                     ];
     return host;
   },

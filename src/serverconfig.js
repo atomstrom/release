@@ -18,7 +18,9 @@ module.exports = {
 			password: "",
 			passPhrase : "",
 			privateKey  : fs.readFileSync(data.config.key),
-			path : data.config.path  
+			path : data.config.path,
+			file: data.config.file,
+			appfolder: data.config.appfolder
 		};
 		return config;
 	}

@@ -17,7 +17,7 @@ var config = {
 	host : data.config.host,
 	port : data.config.port,
 	key  : data.config.keypath,
-	file : data.config.file,
+	file : '../' + data.config.file,
 	path : data.config.path,
 };
 
@@ -41,5 +41,6 @@ scp = scp.join(' ');
 module.exports = {
 	scp: scp
 };
+
 
 

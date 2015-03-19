@@ -4,7 +4,8 @@
   "description": "release package to a server",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "grunt && node main.js"
   },
   "author": "holder",
   "license": "ISC",
