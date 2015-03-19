@@ -36,10 +36,12 @@ module.exports = {
     host.commands = [
                       "cd " + host.server.path,
                       "tar -xvf " + host.server.file + " --strip 1",
-                      "rm " + host.server.file
+                      "rm " + host.server.file,
+                      "cd /"
                     ];
     return host;
-  }
+  },
+  serverpath : host.server.path
 };
 
 
