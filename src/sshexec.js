@@ -9,8 +9,8 @@ var host = {
       console.log(message);
     }
   }, 
-  verbose:             true,   //optional default:false
-  debug:               false,  //optional default:false 
+  verbose:             false,   //optional default:false
+  debug:               false,  //optional default:false
   idleTimeOut:         5000    //optional: value in milliseconds (default:5000)
 };
 
@@ -34,11 +34,9 @@ module.exports = {
     host.closedMessage =  "--- release done";
     host.commands = []; // clear array
     host.commands = [
-                      "cd " + host.server.path,
+                      "cd " + host.server.path + host.server.appfolder,
                       "tar -xvf " + host.server.file + " --strip 1",
-                      "rm -rf " + host.server.file,
-                      "mv data " + host.server.appfolder,
-                      "mv assets " + host.server.appfolder
+                      "rm -rf " + host.server.file
                     ];
     return host;
   },

@@ -13,14 +13,14 @@ var data = JSON.parse(fs.readFileSync(file, 'utf8', function(err) {
 }));
 
 var config = {
-	name : data.config.user,
-	host : data.config.host,
-	port : data.config.port,
-	key  : data.config.keypath,
-	file : '../' + data.config.file,
-	path : data.config.path,
+	name 			: data.config.user,
+	host 			: data.config.host,
+	port 			: data.config.port,
+	key  			: data.config.key,
+	file 			: '../' + data.config.file,
+	path 			: data.config.path,
+	appfolder 		: data.config.appfolder
 };
-
 
 /**
 * create the scp command
@@ -28,7 +28,7 @@ var config = {
 var scp = [
 	'scp',
 	config.file,
-	config.name + '@' + config.host + ':' + config.path 
+	config.name + '@' + config.host + ':' + config.path + config.appfolder
 ];
 
 if (config.key) {
