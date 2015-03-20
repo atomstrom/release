@@ -1,12 +1,13 @@
 {
 	"config": {
-		"user" 		: "",
-		"host" 		: "",
-		"port" 		: "",
-		"key"  		: "", 
-		"keypath"   : "",
-		"file" 		: "",
-		"path" 		: "",
-		"appfolder" : ""
+		"user" 			: "", // login name
+		"host" 			: "", // ip of hoset
+		"port" 			: "", // optional
+		"key"  			: ""  // path to your private key e.g. /Users/username/.ssh/id_rsa
+		"file" 			: "release.tar.gz", // name of the file to upload
+		"path" 			: "", //path to domain e.g /var/www/domain.com/
+		"appfolder" : "" // appfolder e.g. htdocs
 	} 
 }
+
+//				! Remove ALL comments when done ! (including this one...)
